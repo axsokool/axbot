@@ -43,14 +43,14 @@ footer {
 }
 
 .invite-button {
-    position: fixed; /* Ensure button is fixed in the bottom right */
+    position: fixed; /* Keep button fixed in the bottom right */
     bottom: 20px;
     right: 20px;
     width: 60px;
     height: 60px;
     background-color: #7289da; /* Discord blue */
     color: white;
-    border-radius: 50%; /* Makes the button circular */
+    border-radius: 50%; /* Circular button */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,8 +75,8 @@ footer {
     padding: 5px;
     position: absolute;
     bottom: 70px; /* Position tooltip above the button */
-    right: 0; /* Align tooltip with the right edge of the button */
-    transform: translateX(100%); /* Initially hide tooltip to the right */
+    right: 50%; /* Center tooltip horizontally */
+    transform: translateX(50%); /* Initially hide tooltip to the right */
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     white-space: nowrap; /* Prevent tooltip text from wrapping */
