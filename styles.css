@@ -45,8 +45,8 @@ footer {
 
 .invite-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; /* Adjust if needed */
+    right: 20px; /* Adjust if needed */
     width: 60px;
     height: 60px;
     background-color: #7289da; /* Discord blue */
