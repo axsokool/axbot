@@ -38,13 +38,12 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem;
-    position: fixed;
+    position: relative; /* Ensure footer is the relative container */
     width: 100%;
-    bottom: 0;
 }
 
 .invite-button {
-    position: fixed;
+    position: absolute;
     bottom: 20px; /* Adjust if needed */
     right: 20px; /* Adjust if needed */
     width: 60px;
