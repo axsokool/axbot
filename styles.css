@@ -59,6 +59,7 @@ footer {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
     overflow: hidden; /* Ensure tooltip stays within button bounds */
+    z-index: 1; /* Ensure button is above other content */
 }
 
 .invite-button:hover {
@@ -75,12 +76,12 @@ footer {
     padding: 5px;
     position: absolute;
     bottom: 70px; /* Position tooltip above the button */
-    right: 50%; /* Center tooltip horizontally */
-    transform: translateX(50%); /* Initially hide tooltip to the right */
+    right: 100%; /* Start the tooltip just outside the button's right edge */
+    margin-right: 10px; /* Space between button and tooltip */
+    transform: translateX(-10px); /* Initially slide out to the left */
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     white-space: nowrap; /* Prevent tooltip text from wrapping */
-    z-index: 1; /* Ensure tooltip is above other content */
 }
 
 .invite-button:hover .tooltip {
