@@ -38,13 +38,14 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem;
-    position: relative; /* Ensure footer is the relative container */
+    position: relative;
     width: 100%;
 }
 
 .invite-button {
-    position: relative; /* Make the button the relative container */
-    display: inline-block; /* Ensure the tooltip is positioned correctly */
+    position: fixed; /* Ensure button is fixed in the bottom right */
+    bottom: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
     background-color: #7289da; /* Discord blue */
@@ -57,6 +58,7 @@ footer {
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    overflow: hidden; /* Ensure tooltip stays within button bounds */
 }
 
 .invite-button:hover {
@@ -65,23 +67,24 @@ footer {
 
 .tooltip {
     visibility: hidden;
-    width: 120px; /* Adjust width if needed */
+    width: 120px; /* Adjust width as needed */
     background-color: #333; /* Dark background for the tooltip */
     color: #fff;
     text-align: center;
     border-radius: 5px;
     padding: 5px;
     position: absolute;
-    bottom: 100%; /* Position above the button */
-    left: 50%;
-    margin-left: -60px; /* Center the tooltip */
+    bottom: 70px; /* Position tooltip above the button */
+    right: 0; /* Align tooltip with the right edge of the button */
+    transform: translateX(100%); /* Initially hide tooltip to the right */
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    white-space: nowrap; /* Prevent tooltip text from wrapping */
     z-index: 1; /* Ensure tooltip is above other content */
 }
 
 .invite-button:hover .tooltip {
     visibility: visible;
     opacity: 1;
+    transform: translateX(0); /* Slide tooltip into view */
 }
-
