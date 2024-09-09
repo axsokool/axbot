@@ -38,7 +38,8 @@ footer {
     color: white;
     text-align: center;
     padding: 0.5rem;
-    position: relative;
+    position: absolute; /* Position the footer absolutely */
+    bottom: 0; /* Stick it to the bottom */
     width: 100%;
 }
 
@@ -100,4 +101,15 @@ footer {
 .larger-favicon img {
     width: 100px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
+}
+
+html, body {
+    height: 100%; /* Ensure the body and html take up the full height of the viewport */
+    margin: 0;
+}
+
+footer .invite-button {
+    position: absolute; /* Position the button absolutely within the footer */
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
 }
