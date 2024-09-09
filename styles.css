@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #282c34; /* Set background color for the whole page */
 }
 
 header {
@@ -29,6 +30,7 @@ nav ul li a {
 
 main {
     padding: 1rem;
+    color: white; /* Ensure text is visible on the dark background */
 }
 
 footer {
