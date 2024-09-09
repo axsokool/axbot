@@ -43,9 +43,8 @@ footer {
 }
 
 .invite-button {
-    position: absolute;
-    bottom: 20px; /* Adjust if needed */
-    right: 20px; /* Adjust if needed */
+    position: relative; /* Make the button the relative container */
+    display: inline-block; /* Ensure the tooltip is positioned correctly */
     width: 60px;
     height: 60px;
     background-color: #7289da; /* Discord blue */
@@ -63,3 +62,26 @@ footer {
 .invite-button:hover {
     background-color: #5b6eae; /* Darker blue on hover */
 }
+
+.tooltip {
+    visibility: hidden;
+    width: 120px; /* Adjust width if needed */
+    background-color: #333; /* Dark background for the tooltip */
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1; /* Ensure tooltip is above other content */
+}
+
+.invite-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
